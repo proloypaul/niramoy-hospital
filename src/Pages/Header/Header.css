@@ -1,0 +1,14 @@
+.header-container{
+    margin: 20px;
+}
+.header-logo{
+    display: flex;
+    justify-content: space-between;
+}
+.header-option{
+    text-align: right;
+}
+.header-option a{
+    text-decoration: none;
+    margin: 0px 10px;
+}
