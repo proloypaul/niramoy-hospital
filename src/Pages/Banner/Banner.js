@@ -1,9 +1,17 @@
 import React from 'react';
+import './Banner.css';
 
 const Banner = () => {
     return (
         <div>
-            <h1>Banner section</h1>
+            <div className="banner-container">
+                <div className="banner-searchBtn">
+                    <h1>Search To Find Your Disease</h1>
+                    <input type="text" name="" id="" />
+                    <button>Search</button>
+                </div>
+            </div>
+            
         </div>
     );
 };

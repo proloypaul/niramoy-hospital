@@ -5,11 +5,12 @@ import Services from '../Services/Services';
 const Home = () => {
     return (
         <div>
-            <h1>Home section</h1>
             <Banner></Banner>
             <Services></Services>
         </div>
     );
 };
+
+// https://www.alfredhealth.org
 
 export default Home;
