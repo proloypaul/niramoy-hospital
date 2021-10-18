@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initialization from "../Firebase/firebase.init";
 
@@ -8,6 +8,7 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [name, setName] = useState('');
     const [error, setError] = useState('');
     const [isLogin, setIsLogin] = useState(false);
 
@@ -56,11 +57,17 @@ const useFirebase = () => {
         console.log(event.target.value);
     }
 
-    const signInUsignEmailAndPassword = (email, password) => {
+    const handleUserName = event => {
+        setName(event.target.value);
+        console.log(event.target.value)
+    }
+
+    const handleSignUp = (email, password) => {
         createUserWithEmailAndPassword(auth, email , password)
             .then(result => {
                 const user = result.user
                 setUser(user)
+                setUserName()
                 console.log(user)
                 setError('');
             }).catch(error => {
@@ -68,15 +75,44 @@ const useFirebase = () => {
             })
     };
 
-    const handleRegister = event => {
-        event.preventDefault()
-        signInUsignEmailAndPassword(email, password)
+    const handleSignIn = (email, password) => {
+        signInWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                const user = result.user
+                setUser(user)
+                console.log(user)
+                setError('')
+            }).catch(error => {
+                setError(error.message);
+            });
     }
 
-    // toggle button
+    // set user displayName
+
+    const setUserName = () => {
+        updateProfile(auth.currentUser, { displayName: name })
+            .then(result => {
+
+            }).catch(error => {
+                setError(error.message);
+            })
+    }
+
+    const handleRegister = event => {
+        event.preventDefault()
+
+        if(isLogin){
+            handleSignIn(email, password)
+        }else{
+            handleSignUp(email, password)
+        }
+        
+    }
+
+    //collect toggle button boolean
 
     const handleToggle = event => {
-        console.log(event.target.checked);
+        // console.log(event.target.checked);
         setIsLogin(event.target.checked);
     } 
 
@@ -91,6 +127,7 @@ const useFirebase = () => {
         signOutProcess,
         handleEmail,
         handlePassword,
+        handleUserName,
         handleRegister,
         handleToggle
     }

@@ -4,14 +4,14 @@ import useAuth from '../../Context/useAuth';
 import './Register.css';
 
 const Register = () => {
-    const {error, isLogin, signInUsingGoogle, handleEmail, handlePassword, handleRegister, handleToggle} = useAuth()
+    const {error, isLogin, signInUsingGoogle, handleEmail, handlePassword, handleUserName, handleRegister, handleToggle} = useAuth()
     return (
         <div>
             {isLogin ? <h1 className="text-center title">Login Here</h1>: <h1 className="text-center title">Register Here</h1>}
             <div className="register-container">
                 <div>                   
                     <form className="register">
-                        {isLogin ? "" : <input type="text" placeholder="Enter your name" name="" id="" className="register-input"/>}
+                        {isLogin ? "" : <input onBlur={handleUserName} type="text" placeholder="Enter your name" name="" id="" className="register-input"/>}
                         <br/>
                         <input onBlur={handleEmail} type="email" placeholder="Enter your email" name="" id="" className="register-input" required />
                         <br/>
