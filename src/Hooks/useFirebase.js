@@ -11,37 +11,48 @@ const useFirebase = () => {
     const [name, setName] = useState('');
     const [error, setError] = useState('');
     const [isLogin, setIsLogin] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
     const auth = getAuth()
     const googleProvider = new GoogleAuthProvider()
 
     // sign in Usign Google
     const signInUsingGoogle = () => {
+        setIsLoading(true)
         signInWithPopup(auth, googleProvider)
             .then(result => {
                 const user = result.user
                 console.log(user)
                 setError('');
-            }).catch(error => {
-                setError(error.message)
+            }).finally(error => {
+                setIsLoading(false)
+                // setError(error.message)
             });
     };
 
     // signIn and signOut state change 
-    useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
+    useEffect(() => { 
+        const unsubscribed = onAuthStateChanged(auth, (user) => {
             if(user){
                 setUser(user)
+            }else{
+                setUser({})
             }
-        })
+            setIsLoading(false)
+        });
+        return () => unsubscribed;
     }, [])
 
     // sign out process
 
     const signOutProcess = () => {
+        setIsLoading(true)
         signOut(auth)
             .then(() => {
                 setUser({})
+            }).finally(error => {
+                setIsLoading(false)
+                // setError(error.message)
             })
     }
 
@@ -123,6 +134,7 @@ const useFirebase = () => {
         user,
         error,
         isLogin,
+        isLoading,
         signInUsingGoogle,
         signOutProcess,
         handleEmail,
