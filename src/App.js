@@ -6,6 +6,7 @@ import Header from './Pages/Header/Header';
 import Home from './Pages/Home/Home';
 import News from './Pages/News/News';
 import Notfind from './Pages/Notfind/Notfind';
+import Register from './Pages/Register/Register';
 import Services from './Pages/Services/Services';
 import Specialist from './Pages/Specialist/Specialist';
 
@@ -32,6 +33,9 @@ function App() {
           </Route>
           <Route path="/specialist">
             <Specialist></Specialist>
+          </Route>
+          <Route to="/register">
+            <Register></Register>
           </Route>
           <Route path="*">
             <Notfind></Notfind>

@@ -3,7 +3,7 @@ import React from 'react';
 const Specialist = () => {
     return (
         <div>
-            <h1>Our Specialist</h1>
+            <h1 className="title">Our Specialist</h1>
         </div>
     );
 };

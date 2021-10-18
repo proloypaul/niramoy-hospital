@@ -8,7 +8,7 @@ import './New.css';
 const News = () => {
     return (
         <div className="container my-5">
-            <h1>Niramoy News</h1>
+            <h1 className="title">Niramoy News</h1>
             <div>
                 <div className="d-flex my-5 py-5 news-container">
                     <div>

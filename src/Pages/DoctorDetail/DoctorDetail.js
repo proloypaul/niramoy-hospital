@@ -7,7 +7,7 @@ const DoctorDetail = () => {
     const {Idname} = useParams()
     return (
         <div>
-            <h1>Doctor details {Idname}</h1>
+            <h1 className="title">Doctor details {Idname}</h1>
         </div>
     );
 };
