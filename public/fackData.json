@@ -1,0 +1,62 @@
+[
+    {
+      "id": 1,
+      "doctor": "Maj. Gen. Dr. H.R. Harun (Retd.)",
+      "img": "https://thumbs.dreamstime.com/b/young-doctor-16088825.jpg",
+      "description": "This doctor is responsible for all sides of care of a patient. They diagnose, educate, and treat patients to ensure that they have the best possible care. A few of the main duties of a doctor are performing diagnostic tests, recommending specialists for patients, document patient's medical history, and educating patients.",
+      "education": "MBBS (Dha), FCPS (Bd), FRCS",
+      "specialist": "urologist",
+      "rating": 5,
+      "price": 200
+    },
+    {
+      "id": 2,
+      "doctor": "Dr. Md. Faruk Hossain Mounshi",
+      "img": "https://media.istockphoto.com/photos/indian-male-doctor-picture-id177373093?k=20&m=177373093&s=612x612&w=0&h=-PQwmaJszuQyxLQYuWL4VL731lr_dnhrttc4AOcB3-k=",
+      "description": "This doctor is responsible for all sides of care of a patient. They diagnose, educate, and treat patients to ensure that they have the best possible care. A few of the main duties of a doctor are performing diagnostic tests, recommending specialists for patients, document patient's medical history, and educating patients.",
+      "education": "MBBS, MS (Urology)",
+      "specialist": "urologist",
+      "rating": 4.5,
+      "price": 170
+    },
+    {
+      "id": 3,
+      "doctor": "Dr. Tanvir Ahmed Chowdhury",
+      "img": "https://image.freepik.com/free-photo/doctor-smiling-with-stethoscope_1154-36.jpg",
+      "description": "This doctor is responsible for all sides of care of a patient. They diagnose, educate, and treat patients to ensure that they have the best possible care. A few of the main duties of a doctor are performing diagnostic tests, recommending specialists for patients, document patient's medical history, and educating patients.",
+      "education": "MBBS, BCS, FCPS ",
+      "specialist": "urologist",
+      "rating": 4.5,
+      "price": 180
+    },
+    {
+      "id": 4,
+      "doctor": "Dr. Farhana Rahman",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiikGZRIqc3zl5rUJZfXpTFlfud9IxdyhVz_ixTw2Wt-B1BEvDrBs5SDvs-hNOe5oXuk0&usqp=CAU",
+      "description": "This doctor is responsible for all sides of care of a patient. They diagnose, educate, and treat patients to ensure that they have the best possible care. A few of the main duties of a doctor are performing diagnostic tests, recommending specialists for patients, document patient's medical history, and educating patients.",
+      "education": "MBBS, DCH, FCPS (Paediatrics)",
+      "specialist": "Paediatrics",
+      "rating": 5,
+      "price": 195
+    },
+    {
+      "id": 5,
+      "doctor": "Dr. M. A. Afzal Bhuiyan",
+      "img": "https://st2.depositphotos.com/1010683/5848/i/950/depositphotos_58482379-stock-photo-male-asian-doctor.jpg",
+      "description": "This doctor is responsible for all sides of care of a patient. They diagnose, educate, and treat patients to ensure that they have the best possible care. A few of the main duties of a doctor are performing diagnostic tests, recommending specialists for patients, document patient's medical history, and educating patients.",
+      "education": "MBBS, DCH, MRCP",
+      "specialist": "urologist",
+      "rating": 4.5,
+      "price": 175
+    },
+    {
+      "id": 6,
+      "doctor": "Dr. Ahasan Uddin Ahmed",
+      "img": "https://previews.123rf.com/images/imagedb/imagedb1108/imagedb110802313/10124306-portrait-of-a-doctor-smiling.jpg",
+      "description": "This doctor is responsible for all sides of care of a patient. They diagnose, educate, and treat patients to ensure that they have the best possible care. A few of the main duties of a doctor are performing diagnostic tests, recommending specialists for patients, document patient's medical history, and educating patients.",
+      "education": "MBBS, BCS (Health), MCPS",
+      "specialist": "urologist",
+      "rating": 4,
+      "price": 150
+    }
+  ]
