@@ -4,29 +4,27 @@ import useAuth from '../../Context/useAuth';
 import './Register.css';
 
 const Register = () => {
-    const {error, signInUsingGoogle, handleEmail, handlePassword, handleRegister} = useAuth()
+    const {error, isLogin, signInUsingGoogle, handleEmail, handlePassword, handleRegister, handleToggle} = useAuth()
     return (
         <div>
-            <h1 className="text-center title">Register Here</h1>
+            {isLogin ? <h1 className="text-center title">Login Here</h1>: <h1 className="text-center title">Register Here</h1>}
             <div className="register-container">
                 <div>                   
                     <form className="register">
-                        <input type="text" placeholder="give your name" name="" id="" className="register-input"/>
+                        {isLogin ? "" : <input type="text" placeholder="Enter your name" name="" id="" className="register-input"/>}
                         <br/>
-                        <input onBlur={handleEmail} type="email" placeholder="give your email" name="" id="" className="register-input" required />
+                        <input onBlur={handleEmail} type="email" placeholder="Enter your email" name="" id="" className="register-input" required />
                         <br/>
-                        <span>Password must be at least 6 character</span>
+                        <input onBlur={handlePassword} type="password" placeholder="Create a password" name="" id="" className="register-input" required/>
                         <br/>
-                        <input onBlur={handlePassword} type="password" placeholder="create a password" name="" id="" className="register-input" required/>
+                        <input onChange={handleToggle} type="checkbox" name="" id="" /><span className="check-title">Already have an Account</span>
                         <br/>
-                        <input type="checkbox" name="" id="" /><span>Already have an Account</span>
+                        <span className="error-message">{error}</span>
                         <br/>
-                        <span>{error}</span>
-                        <br/>
-                        <button onClick={handleRegister} type="submit">Next</button>
+                        {isLogin ? <button onClick={handleRegister} type="submit" className="visitBtn">Login</button>:<button onClick={handleRegister} type="submit" className="visitBtn">Register</button>}
                     </form>
                     <div>
-                        <button onClick={signInUsingGoogle}>Google SignIn</button>
+                        <button onClick={signInUsingGoogle} className="googleBtn">Google SignIn</button>
                     </div>
                 </div>
             </div>
