@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import useFirebase from '../../Hooks/useFirebase';
+import useAuth from '../../Context/useAuth';
+// import useFirebase from '../../Hooks/useFirebase';
 import './Header.css';
 
 const Header = () => {
-    const {user, signOutProcess} = useFirebase()
+    const {user, signOutProcess} = useAuth();
     return (
         <div>
             

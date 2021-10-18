@@ -1,9 +1,10 @@
 import React from 'react';
-import useFirebase from '../../Hooks/useFirebase';
+import useAuth from '../../Context/useAuth';
+// import useFirebase from '../../Hooks/useFirebase';
 import './Register.css';
 
 const Register = () => {
-    const {error, signInUsingGoogle} = useFirebase()
+    const {error, signInUsingGoogle} = useAuth()
     return (
         <div>
             <h1 className="text-center title">Register Here</h1>
