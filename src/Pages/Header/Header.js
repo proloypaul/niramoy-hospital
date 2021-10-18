@@ -16,6 +16,8 @@ const Header = () => {
                 <div className="header-option">
                     <NavLink to="/home">Home</NavLink>
                     <NavLink to="/services">Services</NavLink>
+                    <NavLink to="/news">Niramoy News</NavLink>
+                    <NavLink to="/specialist">Specialist</NavLink>
                 </div>
             </nav>
         </div>

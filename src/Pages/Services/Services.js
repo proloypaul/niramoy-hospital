@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Service from '../Service/Service';
+import './Services.css';
 
 const Services = () => {
     const [doctors, setDoctors] = useState([]);
@@ -10,9 +11,9 @@ const Services = () => {
             .then(data => setDoctors(data))
     }, [])
     return (
-        <div>
+        <div className="container my-5">
             <h1>Doctor Service</h1>
-            <div>
+            <div className="services col-sm-12">
                 {doctors.map(doctor => <Service key={doctor.id} doctor={doctor}></Service>)}
             </div>
         </div>
