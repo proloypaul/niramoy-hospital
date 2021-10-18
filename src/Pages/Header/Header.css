@@ -11,4 +11,23 @@
 .header-option a{
     text-decoration: none;
     margin: 0px 10px;
+    font-weight: bolder;
+    color: teal;
+}
+.header-logo button{
+    background-color: teal;
+    padding: 5px 20px;
+    border: 0;
+    border-radius: 25px;
+}
+.header-logo a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+
+}
+
+.header-container .register-option span{
+    font-weight: bold;
+    padding: 0px 10px;
 }

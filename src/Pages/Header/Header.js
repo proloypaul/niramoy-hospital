@@ -1,16 +1,19 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import useFirebase from '../../Hooks/useFirebase';
 import './Header.css';
 
 const Header = () => {
+    const {user, signOutProcess} = useFirebase()
     return (
         <div>
             
             <nav className="header-container">
                 <div className="header-logo">
                     <h1>NiramoyHospital</h1>
-                    <div>
-                        <button><Link to="/register">Sign Up</Link> </button>
+                    <div className="register-option">
+                        <span>{user.displayName}</span>
+                        {user.email ? <button onClick={signOutProcess}><Link to="/register">Sign Out</Link> </button> : <button><Link to="/register">Sign Up</Link> </button>}
                     </div>
                 </div>
                 <div className="header-option">

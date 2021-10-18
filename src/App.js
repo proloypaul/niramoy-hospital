@@ -2,6 +2,7 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import DoctorDetail from './Pages/DoctorDetail/DoctorDetail';
+import Footer from './Pages/Footer/Footer';
 import Header from './Pages/Header/Header';
 import Home from './Pages/Home/Home';
 import News from './Pages/News/News';
@@ -41,6 +42,7 @@ function App() {
             <Notfind></Notfind>
           </Route>
         </Switch>
+        <Footer></Footer>
       </Router>
     </div>
   );

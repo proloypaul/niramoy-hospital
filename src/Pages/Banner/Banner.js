@@ -7,8 +7,8 @@ const Banner = () => {
             <div className="banner-container">
                 <div className="banner-searchBtn">
                     <h1>Search To Find Your Disease</h1>
-                    <input type="text" name="" id="" />
-                    <button>Search</button>
+                    <input type="text" placeholder="Search Your disease"/>
+                    <button className="searchBtn">Search</button>
                 </div>
             </div>
             
