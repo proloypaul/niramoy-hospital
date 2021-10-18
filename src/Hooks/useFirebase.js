@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initialization from "../Firebase/firebase.init";
 
@@ -6,6 +6,8 @@ initialization()
 
 const useFirebase = () => {
     const [user, setUser] = useState({});
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
     const auth = getAuth()
@@ -41,12 +43,46 @@ const useFirebase = () => {
             })
     }
 
+    // register usign email and password
+
+    const handleEmail = event => {
+        setEmail(event.target.value);
+        console.log(event.target.value);
+    };
+
+    const handlePassword = event => {
+        setPassword(event.target.value);
+        console.log(event.target.value);
+    }
+
+    const signInUsignEmailAndPassword = (email, password) => {
+        createUserWithEmailAndPassword(auth, email , password)
+            .then(result => {
+                const user = result.user
+                setUser(user)
+                console.log(user)
+                setError('');
+            }).catch(error => {
+                setError(error.message)
+            })
+    };
+
+    const handleRegister = event => {
+        event.preventDefault()
+        signInUsignEmailAndPassword(email, password)
+    }
+
+
+
 
     return{
         user,
         error,
         signInUsingGoogle,
-        signOutProcess
+        signOutProcess,
+        handleEmail,
+        handlePassword,
+        handleRegister
     }
 
 }
