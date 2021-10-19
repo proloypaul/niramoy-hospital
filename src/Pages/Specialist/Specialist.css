@@ -1,0 +1,24 @@
+.specialist-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    cursor: pointer;
+}
+.specialist-container .specialist{
+    /* border: 1px solid black; */
+    width: 300px;
+    /* height: 200px; */
+}
+.specialist img{
+    width: 300px;
+    height: 200px;
+}
+.specialist h3{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
