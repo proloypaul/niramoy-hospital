@@ -6,8 +6,8 @@ const DoctorDetail = () => {
     // console.log(id)
     const {Idname} = useParams()
     return (
-        <div>
-            <h1 className="title">Doctor details {Idname}</h1>
+        <div className="text-center my-5" >
+            <h1 className="title">Doctor Id {Idname}</h1>
         </div>
     );
 };
