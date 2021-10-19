@@ -6,9 +6,9 @@
     cursor: pointer;
 }
 .specialist-container .specialist{
-    /* border: 1px solid black; */
+    border: 0px;
     width: 300px;
-    /* height: 200px; */
+    
 }
 .specialist img{
     width: 300px;
@@ -16,9 +16,9 @@
 }
 .specialist h3{
     background-color: black;
-    color: white;
+    color: #9A1750;
     padding: 10px;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: bold;
     text-align: center;
 }

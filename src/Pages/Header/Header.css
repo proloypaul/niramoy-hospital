@@ -14,6 +14,11 @@
     font-weight: bolder;
     color: teal;
 }
+.header-logo h1{
+    font-size: 40px;
+    font-weight: 200;
+    color: #E85A4F;
+}
 .header-logo button{
     background-color: teal;
     padding: 5px 20px;

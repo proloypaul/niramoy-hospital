@@ -11,7 +11,7 @@ const Service = (props) => {
                 <div className="doctor-images">
                     <img src={img} alt="Empty!" className="img-fluid"/>
                 </div>
-                <div className="doctor-title">
+                <div className="doctor-details">
                     <h1>{doctor}</h1>
                     <h4>Specialist of {specialist}</h4>
                     <b>{education}</b>

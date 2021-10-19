@@ -11,10 +11,10 @@ import './Specialist.css';
 
 const Specialist = () => {
     return (
-        <div className="container my-5">
+        <div className="container my-5 row">
             <h1 className="title text-center">All Specialist</h1>
 
-            <div className="specialist-container my-5">
+            <div className="specialist-container my-5 ">
                 <div className="specialist">
                     <div>
                         <img src={sonologist} alt="Empty!"/>
