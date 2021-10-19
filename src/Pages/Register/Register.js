@@ -11,13 +11,13 @@ const Register = () => {
             <div className="register-container">
                 <div>                   
                     <form className="register">
-                        {isLogin ? "" : <input onBlur={handleUserName} type="text" placeholder="Enter your name" name="" id="" className="register-input"/>}
+                        {isLogin ? "" : <input onBlur={handleUserName} type="text" placeholder="Enter your name" className="register-input" required/>}
                         <br/>
-                        <input onBlur={handleEmail} type="email" placeholder="Enter your email" name="" id="" className="register-input" required />
+                        <input onBlur={handleEmail} type="email" placeholder="Enter your email" className="register-input" required />
                         <br/>
-                        <input onBlur={handlePassword} type="password" placeholder="Create a password" name="" id="" className="register-input" required/>
+                        <input onBlur={handlePassword} type="password" placeholder="Create a password" className="register-input" required/>
                         <br/>
-                        <input onChange={handleToggle} type="checkbox" name="" id="" /><span className="check-title">Already have an Account</span>
+                        <input onChange={handleToggle} type="checkbox" /><span className="check-title">Already have an Account</span>
                         <br/>
                         <span className="error-message">{error}</span>
                         <br/>
